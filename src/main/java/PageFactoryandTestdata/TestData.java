@@ -4,8 +4,8 @@ public class TestData {
 
 	public static String email;
 	public static String Banme="Chrome"; 
-	public static String dev ="https://www.nepal-matrimony.com/";
-	public static String stage ="https://www.nepal-matrimony.com/";
+	public static String dev ="https://www.wiley.com/en-us";
+	public static String stage ="https://www.wiley.com/en-us";
 
 // SITA Credentials
 	public static String USER="admin"; 

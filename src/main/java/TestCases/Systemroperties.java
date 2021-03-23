@@ -18,7 +18,7 @@ public class Systemroperties extends ExecutionFile {
 	
 					try {
 						ExtentHtmlReporter htmlReporter;
-						htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/Match-Making.html");
+						htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/Wiley.html");
 						extent = new ExtentReports();
 						extent.attachReporter(htmlReporter);
 						extent.setSystemInfo("HostName", "Iftikhar");
@@ -27,7 +27,7 @@ public class Systemroperties extends ExecutionFile {
 						extent.setSystemInfo("URL", envirnment);
 				//		extent.setReportUsesManualConfiguration(true);
 						htmlReporter.config().setDocumentTitle("Automation Testing Report");
-						htmlReporter.config().setReportName("Match-Making");
+						htmlReporter.config().setReportName("Wiley");
 						htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 						htmlReporter.config().setTheme(Theme.DARK);
 						htmlReporter.getStartTime();
