@@ -7,10 +7,10 @@
         <methods>
           <include name="getResult"/>
           <include name="endReport"/>
-          <include name="Education"/>
           <include name="SystmProperties"/>
+          <include name="Verify_Delay"/>
+          <include name="Verify_Image"/>
           <include name="Startup"/>
-          <include name="AccessApp"/>
           <include name="CloseBrowser"/>
         </methods>
       </class> <!-- Master.ExecutionFile -->

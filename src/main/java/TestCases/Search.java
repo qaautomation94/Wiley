@@ -8,14 +8,11 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import PageFactoryandTestdata.HelpingFunction;
 import PageFactoryandTestdata.Locatiors;
-import PageFactoryandTestdata.TestData;
 
 
 public class Search extends HelpingFunction  {
@@ -72,31 +69,47 @@ public class Search extends HelpingFunction  {
 		int count2 = li2.size();
 		
 		Assert.assertEquals(count2, 10);
-//		for(int a=0; a<count2; a++) {
-//			System.out.println(li2.get(a).getText());
-//			Assert.assertTrue(li2.get(a).getText().contains("Java"));
-//		}
 
-		
-		List<WebElement> li3 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::ul"));
-		int count3 = li3.size();
-		
-		for(int a=0; a<count3; a++) {
-			System.out.println(li3.get(a).getText());
-			Assert.assertTrue(li3.get(a).getText().contains("E-BOOK"));
-		}
-
-		for(int a=0; a<count3; a++) {
-			System.out.println(li3.get(a).getText());
-			Assert.assertTrue(li3.get(a).getText().contains("PRINT"));
-		}
-		for(int a=0; a<count3; a++) {
-			System.out.println(li3.get(a).getText());
-			Assert.assertTrue(li3.get(a).getText().contains("O-BOOK"));
-		}
 
 
 }
 
+	public static void VerifyEBook() throws InterruptedException, AWTException, IOException{
+
+		
+		List<WebElement> li1 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'E-Book')]"));
+		int count1 = li1.size();
+		
+		List<WebElement> li2 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'E-Book')]/ancestor::div[contains(@id, 'eBundlePlpTabMainTabPanel')]"));
+		int count2 = li2.size();
+		
+		Assert.assertEquals(count1, count2);
+		
+	}
+	
+public static  void VerifyPrint() throws InterruptedException, AWTException, IOException{
+
+		
+		List<WebElement> li1 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'Print')]"));
+		int count1 = li1.size();
+		
+		List<WebElement> li2 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'Print')]/ancestor::div[contains(@id, 'eBundlePlpTabMainTabPanel')]"));
+		int count2 = li2.size();
+		
+		Assert.assertEquals(count1, count2);
+		
+	}
+public static  void VerifyOBook() throws InterruptedException, AWTException, IOException{
+
+	
+	List<WebElement> li1 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'O-Book')]"));
+	int count1 = li1.size();
+	
+	List<WebElement> li2 = driver.findElements(By.xpath("//h3[contains(@class, 'product-title')]/a/ancestor::div[contains(@class, 'product-content')]/descendant::div[contains(text(), 'O-Book')]/ancestor::div[contains(@id, 'eBundlePlpTabMainTabPanel')]"));
+	int count2 = li2.size();
+	
+	Assert.assertEquals(count1, count2);
+	
+}
 }
 

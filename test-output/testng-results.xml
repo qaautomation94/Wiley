@@ -1,55 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-23T23:03:41 PKT" name="Default suite" finished-at="2021-03-23T23:04:41 PKT" duration-ms="59805">
+  <suite started-at="2021-03-24T01:21:01 PKT" name="Default suite" finished-at="2021-03-24T01:22:06 PKT" duration-ms="65048">
     <groups>
     </groups>
-    <test started-at="2021-03-23T23:03:41 PKT" name="Default test" finished-at="2021-03-23T23:04:41 PKT" duration-ms="59805">
+    <test started-at="2021-03-24T01:21:01 PKT" name="Default test" finished-at="2021-03-24T01:22:06 PKT" duration-ms="65048">
       <class name="Master.ExecutionFile">
-        <test-method is-config="true" signature="SystmProperties()[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:03:40 PKT" name="SystmProperties" finished-at="2021-03-23T23:03:41 PKT" duration-ms="712" status="PASS">
+        <test-method is-config="true" signature="SystmProperties()[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:01 PKT" name="SystmProperties" finished-at="2021-03-24T01:21:01 PKT" duration-ms="302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SystmProperties -->
-        <test-method is-config="true" signature="Startup()[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:03:41 PKT" name="Startup" finished-at="2021-03-23T23:03:49 PKT" duration-ms="7288" status="PASS">
+        <test-method is-config="true" signature="Startup()[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:01 PKT" name="Startup" finished-at="2021-03-24T01:21:07 PKT" duration-ms="6134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Startup -->
-        <test-method signature="AccessApp()[pri:1, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:03:49 PKT" name="AccessApp" finished-at="2021-03-23T23:04:01 PKT" duration-ms="12710" status="PASS">
+        <test-method signature="AccessApp()[pri:1, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:07 PKT" name="AccessApp" finished-at="2021-03-24T01:21:18 PKT" duration-ms="10493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AccessApp -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:04:01 PKT" name="getResult" finished-at="2021-03-23T23:04:04 PKT" duration-ms="2561" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:18 PKT" name="getResult" finished-at="2021-03-24T01:21:21 PKT" duration-ms="3515" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AccessApp status=SUCCESS method=ExecutionFile.AccessApp()[pri:1, instance:Master.ExecutionFile@5db250b4] output={null}]]]>
+                <![CDATA[[TestResult name=AccessApp status=SUCCESS method=ExecutionFile.AccessApp()[pri:1, instance:Master.ExecutionFile@27ae2fd0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method signature="Education()[pri:9, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:04:04 PKT" name="Education" finished-at="2021-03-23T23:04:41 PKT" duration-ms="36891" status="PASS">
+        <test-method signature="GetCall()[pri:10, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:21 PKT" name="GetCall" finished-at="2021-03-24T01:21:23 PKT" duration-ms="1329" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Education -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:04:41 PKT" name="getResult" finished-at="2021-03-23T23:04:41 PKT" duration-ms="257" status="PASS">
+        </test-method> <!-- GetCall -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:23 PKT" name="getResult" finished-at="2021-03-24T01:21:23 PKT" duration-ms="226" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Education status=SUCCESS method=ExecutionFile.Education()[pri:9, instance:Master.ExecutionFile@5db250b4] output={null}]]]>
+                <![CDATA[[TestResult name=GetCall status=SUCCESS method=ExecutionFile.GetCall()[pri:10, instance:Master.ExecutionFile@27ae2fd0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:04:41 PKT" name="endReport" finished-at="2021-03-23T23:04:41 PKT" duration-ms="1" status="PASS">
+        <test-method signature="Verify_Delay()[pri:11, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:23 PKT" name="Verify_Delay" finished-at="2021-03-24T01:21:50 PKT" duration-ms="27602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Delay -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:50 PKT" name="getResult" finished-at="2021-03-24T01:21:51 PKT" duration-ms="165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Verify_Delay status=SUCCESS method=ExecutionFile.Verify_Delay()[pri:11, instance:Master.ExecutionFile@27ae2fd0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="Verify_Image()[pri:12, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:21:51 PKT" name="Verify_Image" finished-at="2021-03-24T01:22:06 PKT" duration-ms="15230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Image -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:22:06 PKT" name="getResult" finished-at="2021-03-24T01:22:06 PKT" duration-ms="249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Verify_Image status=SUCCESS method=ExecutionFile.Verify_Image()[pri:12, instance:Master.ExecutionFile@27ae2fd0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:22:06 PKT" name="endReport" finished-at="2021-03-24T01:22:06 PKT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:Master.ExecutionFile@5db250b4]" started-at="2021-03-23T23:04:41 PKT" name="CloseBrowser" finished-at="2021-03-23T23:04:41 PKT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:Master.ExecutionFile@27ae2fd0]" started-at="2021-03-24T01:22:06 PKT" name="CloseBrowser" finished-at="2021-03-24T01:22:06 PKT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->

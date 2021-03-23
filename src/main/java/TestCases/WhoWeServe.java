@@ -58,10 +58,7 @@ public class WhoWeServe extends HelpingFunction  {
 					WebElement we = GetData.Subjects;
 					action.moveToElement(we).build().perform();
 					
-			//		Input("Please Enter UserName", GetData.UserName, TestData.USER);
-			//		Input("Please Enter Password", GetData.Password, TestData.PASS);
 
-			//		Click("Please click login button",GetData.LoginButton);
 					Thread.sleep(5000);
 					WebElement we1 = GetData.Education;
 					action.moveToElement(we1).build().perform();
@@ -72,12 +69,12 @@ public class WhoWeServe extends HelpingFunction  {
 					System.out.println(count);
 					String[] Education = {"Assessment Evaluation Methods", "Classroom Management", "Conflict Resolution & Mediation", "Curriculum Tools", "Education & Public Policy", "Educational Research", "General Education", "Higher Education", "Information & Library Science", "Special Education", "Special Topics", "Vocational Technology"};
 
-					for(int a=0; a<count; a++) {
+					for(int a=1; a<count; a++) {
 						System.out.println(li.get(a).getText());
 						
-						String str = li.get(a).getText();
-						str = str.replaceAll(",", "");
-						Assert.assertEquals(str, Education[a]);
+//						String str = li.get(a).getText();
+//						str = str.replaceAll(",", "");
+						Assert.assertEquals(li.get(a).getText(), Education[a]);
 						
 					}
 					

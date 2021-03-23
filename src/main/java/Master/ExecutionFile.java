@@ -4,11 +4,9 @@ import static TestCases.StartBrowser.StartupBrowser;
 import java.awt.AWTException;
 import java.io.IOException;
 
-import org.openqa.selenium.By;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -22,10 +20,15 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import PageFactoryandTestdata.TestData;
-import TestCases.*;
+import TestCases.API;
+import TestCases.Login;
+import TestCases.Search;
 import TestCases.Systemroperties;
 import TestCases.WhoWeServe;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 public class ExecutionFile {
 	
 	protected static WebDriver driver;
@@ -34,6 +37,9 @@ public class ExecutionFile {
 	public static String browser="chrome";
 	static String Suite="Wiley.html";
 	protected static String email;
+	public static RequestSpecification request;
+	public static JSONObject json;
+	public static Response resp;
 	
 	protected static String envirnment=TestData.stage;
 		
@@ -58,7 +64,7 @@ public class ExecutionFile {
 		public void AccessApp() throws InterruptedException, AWTException, IOException{
 		 	Login.AccessApplication();		
 	 	}
-		/*
+	
 		@Test(priority=2)
 		public void Verify_Who_We_Serve() throws InterruptedException, AWTException, IOException{
 		 	WhoWeServe.WhoWe_Server();		
@@ -78,18 +84,45 @@ public class ExecutionFile {
 		public void VerifySearchResultsCount() throws InterruptedException, AWTException, IOException{
 			Search.SearchResultsCount();
 	 	}
-	 	*/
-	/*	
+		
+		
 		@Test(priority=6)
-		public void VerifySearchResultsCount() throws InterruptedException, AWTException, IOException{
-			Search.SearchResultsCount();
+		public  void VerifyBook() throws InterruptedException, AWTException, IOException{
+			Search.VerifyEBook();
 	 	}
-		*/
+		@Test(priority=7)
+		public void Verify_Print() throws InterruptedException, AWTException, IOException{
+			Search.VerifyPrint();
+	 	}
+		
+		@Test(priority=8)
+		public void VerifyO_BOOK() throws InterruptedException, AWTException, IOException{
+			Search.VerifyOBook();
+	 	}
+		
 		
 		@Test(priority=9)
 		public void Education() throws InterruptedException, AWTException, IOException{
 		 	WhoWeServe.Edu();	
 	 	}
+
+
+		@Test(priority=10)
+		public void GetCall() throws InterruptedException, AWTException, IOException, ParseException{
+		 	API.Get_Call();	
+	 	}
+		
+		@Test(priority=11)
+		public void Verify_Delay() throws InterruptedException, AWTException, IOException, ParseException{
+		 	API.Delay();
+	 	}
+		
+		@Test(priority=12)
+		public void Verify_Image() throws InterruptedException, AWTException, IOException, ParseException{
+		 	API.Png();
+	 	}
+		
+	
 		
 			@AfterMethod
 			public void getResult(ITestResult result) throws IOException, InterruptedException{
